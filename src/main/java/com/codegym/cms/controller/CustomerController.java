@@ -6,6 +6,7 @@ import com.codegym.cms.model.Province;
 import com.codegym.cms.service.CustomerService;
 import com.codegym.cms.service.ProvinceService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -17,6 +18,8 @@ import java.util.Optional;
 
 @Controller
 public class CustomerController {
+    @Value("login.heading")
+    String a;
 
     @Autowired
     private CustomerService customerService;
